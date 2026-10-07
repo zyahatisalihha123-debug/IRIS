@@ -2124,4 +2124,294 @@ footer {
 .bottom-left-btn:hover {
   background-color: #38b2ac;
   transform: translateY(-2px);
+/* Styling Khusus Dua Gambar Retina Melayang */
+.image-wrapper {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 15px !important;
+  align-items: center !important;
+  width: 100% !important;
 }
+/* PAKSA LAYOUT DUA KOLOM BERDAMPINGAN */
+.vres-section .container,
+.v-results,
+#results .container {
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: space-between !important;
+  align-items: flex-start !important;
+  gap: 30px !important;
+}
+
+/* SISI KIRI (TEKS & KOTAK) */
+.vres-left, 
+.vres-card-container {
+  flex: 1 !important;
+  max-width: 500px !important;
+}
+
+/* SISI KANAN (GAMBAR) */
+.vres-right {
+  flex: 1 !important;
+  display: flex !important;
+  justify-content: center !important;
+}
+
+.image-wrapper {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 15px !important;
+  align-items: center !important;
+  width: 100% !important;
+}
+
+.image-wrapper img {
+  width: 100% !important;
+  max-width: 320px !important;
+  height: auto !important;
+  border-radius: 16px !important;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1) !important;
+  border: 1px solid #e2e8f0 !important;
+/* PAKSA KELUARAN KE SEBELAH KANAN TEKS (AREA HIJAU) */
+.vres-section, 
+.v-results, 
+#results {
+  position: relative !important;
+}
+
+/* Memaksa kontainer kanan naik sejajar dengan judul & kotak */
+.vres-right {
+  position: absolute !important;
+  right: 5% !important;
+  top: 10px !important;
+  width: 280px !important;
+  display: flex !important;
+  justify-content: center !important;
+}
+
+.vres-right .image-wrapper {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 15px !important;
+  align-items: center !important;
+}
+
+/* Paksa ukuran kedua gambar sama persis */
+.vres-right img,
+.img-lesion,
+.img-phone {
+  width: 210px !important;
+  max-width: 210px !important;
+  height: auto !important;
+  border-radius: 12px !important;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1) !important;
+}
+<section id="results" class="section-results">
+  <div class="container main-grid">
+    
+    <!-- KOLOM KIRI (TEKS & METRIK) -->
+    <div class="content-left">
+      <span class="badge">Key Findings</span>
+      <h1>Validation Results</h1>
+      <h2 class="sub-title">Reliable Detection Performance</h2>
+      <p>The detection model demonstrated improving and increasingly stable detection performance...</p>
+      
+      <div class="metrics-grid">
+        <div class="metric-card">mAP@50-75%</div>
+        <div class="metric-card">mAP@50-95-65%</div>
+        <div class="metric-card">Precision-99%</div>
+        <div class="metric-card">Recall-70%</div>
+      </div>
+    </div>
+
+    <!-- KOLOM KANAN (GAMBAR RETINA & HP) -->
+    <div class="content-right">
+      <div class="image-wrapper">
+        <img src="retina-detection.jpeg" alt="YOLOv8 Detection">
+        <img src="retina-app.jpeg" alt="AI Analysis App">
+      </div>
+    </div>
+
+  </div>
+</section>
+/* CONTAINER KOLASE MELAYANG */
+.collage-container {
+  position: relative !important;
+  width: 320px !important;
+  height: 380px !important;
+  margin: 0 auto !important;
+}
+
+/* GAMBAR 1: RETINA DETEKSI (Posisi Kiri Atas) */
+.card-lesion {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 210px !important;
+  height: auto !important;
+  border-radius: 16px !important;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12) !important;
+  z-index: 1 !important;
+}
+
+/* ===================================================
+   KOTAK CONTAINER GAMBAR MELAYANG & EFEK HOVER POP-UP
+   =================================================== */
+
+/* Container Utama Kotak Melayang */
+.floating-box {
+  position: relative !important;
+  width: 100% !important;
+  max-width: 380px !important;
+  height: 380px !important; /* Ruang untuk 2 foto melayang */
+  margin: 0 auto !important;
+}
+
+/* Base style untuk kartu foto */
+.card-float {
+  position: absolute !important;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important; /* Efek membal halus saat pop up */
+  border-radius: 16px !important;
+  overflow: hidden !important;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12) !important;
+  background: #ffffff !important;
+}
+
+.card-float img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  display: block !important;
+}
+
+/* POSISI FOTO 1: Kiri Bawah (Deteksi Retina) */
+.card-bottom-left {
+  width: 210px !important;
+  height: auto !important;
+  bottom: 10px !important;
+  left: 0 !important;
+  z-index: 1 !important;
+}
+
+/* POSISI FOTO 2: Kanan Atas (Tampilan App HP) */
+.card-top-right {
+  width: 180px !important;
+  height: auto !important;
+  top: 0 !important;
+  right: 0 !important;
+  z-index: 2 !important;
+  border: 3px solid #ffffff !important; /* Garis putih pembatas antar foto */
+}
+/* STYLING DUA KOLOM SISI KIRI DAN SISI KANAN */
+.vres-container {
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: space-between !important;
+  align-items: flex-start !important;
+  gap: 40px !important;
+  width: 100% !important;
+  max-width: 1100px !important;
+  margin: 0 auto !important;
+}
+
+.vres-left {
+  flex: 1 !important;
+  max-width: 550px !important;
+}
+
+.vres-right {
+  flex: 1 !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+/* KOTAK MELAYANG */
+.floating-box {
+  position: relative !important;
+  width: 340px !important;
+  height: 360px !important;
+}
+
+.card-float {
+  position: absolute !important;
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease !important;
+  border-radius: 16px !important;
+  overflow: hidden !important;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12) !important;
+  background: #ffffff !important;
+  cursor: pointer !important;
+}
+
+.card-float img {
+  width: 100% !important;
+  height: auto !important;
+  display: block !important;
+}
+
+/* Kiri Bawah (Deteksi Retina) */
+.card-bottom-left {
+  width: 210px !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  z-index: 1 !important;
+}
+/* ===================================================
+   STYLING DUA GAMBAR BERDAMPINGAN & EFEK POP-UP
+   =================================================== */
+
+/* Wadah gambar di kanan */
+.vres-right {
+  flex: 1 !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+/* Container utama untuk dua gambar berdampingan */
+.floating-box {
+  display: flex !important;
+  flex-direction: row !important; /* Memaksa gambar berdampingan ke kanan */
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 15px !important; /* Jarak antar gambar */
+  width: auto !important;
+  height: auto !important;
+  position: relative !important;
+}
+
+/* Style dasar kartu melayang */
+.card-float {
+  position: relative !important; /* Diubah agar berdampingan rapi */
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease !important;
+  border-radius: 16px !important;
+  overflow: hidden !important;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1) !important;
+  background: #ffffff !important;
+  cursor: pointer !important;
+  flex-shrink: 0 !important;
+}
+
+.card-float img {
+  display: block !important;
+  height: auto !important;
+}
+
+/* GAMBAR 1: Deteksi Retina (Kiri) */
+.card-left {
+  width: 220px !important;
+}
+
+.card-left img {
+  width: 220px !important;
+}
+
+/* GAMBAR 2: Tampilan App HP (Kanan - Dikecilkan Presisi) */
+.card-right {
+  width: 150px !important; /* Ukuran HP dikecilkan agar pas & sejajar */
+}
+
+.card-right img {
+  width: 150px !important;
+}
+

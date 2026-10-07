@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Democratizing Screening for Diabetes | RetinaScan</title>
+    <title>Democratizing Screening for Diabetes | IRIS</title>
     <link rel="stylesheet" href="style.css">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,6 +11,36 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <!-- FontAwesome Font/Icons -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous"></script>
+<style>
+  /* PAKSA UKURAN GAMBAR SEJAJAR */
+  .vres-container {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: flex-start !important;
+    gap: 30px !important;
+  }
+
+  .card-right, 
+  .card-right img {
+    width: 250px !important;
+    max-width: 250px !important;
+    height: auto !important;
+  }
+
+  .card-left, 
+  .card-left img {
+    width: 220px !important;
+    max-width: 220px !important;
+    height: auto !important;
+  }
+
+  .card-float:hover {
+    transform: scale(1.08) translateY(-6px) !important;
+    z-index: 20 !important;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.18) !important;
+  }
+</style>
 </head>
 <body>
 
@@ -18,13 +48,12 @@
     <header>
         <div class="container navbar">
             <div class="logo">
-                <i class="fa-solid fa-eye brand-icon"></i> RetinaScan
+                <i class="fa-solid fa-eye brand-icon"></i> IRIS 
             </div>
             <ul class="nav-links">
                 <li><a href="#methodology">Study Methodology</a></li>
                 <li><a href="#results">Results</a></li>
-                <li><a href="#impact">Impact</a></li>
-                <li><a href="https://docs.google.com/document/d/1Zn6_ST9cUCHTqSE6kRzshv6huTeYVSxZ/edit?usp=sharing&ouid=103895825590429882575&rtpof=true&sd=true">Publications</a></li>
+                <li><a href="https://docs.google.com/document/d/1Zn6_ST9cUCHTqSE6kRzshv6huTeYVSxZ/edit?usp=sharing&ouid=107362458111765023695&rtpof=true&sd=true">Publications</a></li>
             <a href="./files/aplikasi-saya.apk" download="RetinalScreeningApp.apk" class="nav-btn">
       Check our retinal screening app
     </a>
@@ -205,160 +234,57 @@
                     </ul>
                 </div>
             </div>
-          
-   <!-- SECTION VALIDATION RESULTS (BERSIH 100%) -->
-    <section id="results" class="vres-section">
-        <div class="vres-container">
-            
-            <!-- SISI KIRI: TEKS & 6 KOTAK STATISTIK -->
-            <div class="vres-left">
-                <div class="vres-badge">
-                    <i class="fa-solid fa-chart-simple"></i> Key Findings
-                </div>
-                
-                <h2 class="vres-title">
-                    Validation Results <br>
-                    <span class="vres-title-blue">Exceed Clinical Thresholds</span>
-                </h2>
-                
-                <p class="vres-desc">
-                    The smartphone system demonstrated diagnostic performance surpassing the WHO-recommended 80% sensitivity and 90% specificity thresholds for referable diabetic retinopathy screening programs.
-                </p>
+   <!-- SECTION VALIDATION RESULTS -->
+<section id="results" class="vres-section">
+  <div class="vres-container">
 
-                <div class="vres-stats-grid">
-                    <div class="vres-card">
-                        <h4 class="vres-num vres-dark">91.4%</h4>
-                        <p class="vres-sub">Sensitivity (any DR)</p>
-                    </div>
-                    <div class="vres-card">
-                        <h4 class="vres-num vres-dark">88.7%</h4>
-                        <p class="vres-sub">Specificity (any DR)</p>
-                    </div>
+    <!-- SISI KIRI: TEKS & STATISTIK -->
+    <div class="vres-left">
+      <div class="vres-badge">
+        <i class="fa-solid fa-chart-simple"></i> Key Findings
+      </div>
 
-                    <div class="vres-card">
-                        <h4 class="vres-num vres-teal">94.1%</h4>
-                        <p class="vres-sub">Sensitivity (Referable DR)</p>
-                    </div>
-                    <div class="vres-card">
-                        <h4 class="vres-num vres-teal">92.3%</h4>
-                        <p class="vres-sub">Specificity (Referable DR)</p>
-                    </div>
+      <h2 class="vres-title">
+        Validation Results <br>
+        <span class="vres-title-blue">Reliable Detection Performance</span>
+      </h2>
 
-                    <div class="vres-card">
-                        <h4 class="vres-num vres-dark">0.82</h4>
-                        <p class="vres-sub">Cohen's Kappa</p>
-                    </div>
-                    <div class="vres-card">
-                        <h4 class="vres-num vres-blue">87.9%</h4>
-                        <p class="vres-sub">Positive Predictive Value</p>
-                    </div>
-                </div>
-            </div>
+      <p class="vres-desc">
+        The detection model demonstrated improving and increasingly stable detection performance throughout training.
+      </p>
 
-            <!-- SISI KANAN: GAMBAR DOKTER & 2 KARTU MELAYANG -->
-            <div class="vres-right">
-                <div class="vres-img-frame">
-                    <!-- Masukkan nama file gambar doktermu di sini -->
-                    <img src="image.png" alt="Doctor" class="vres-doc-img" onerror="this.src='https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=800&q=80'">
-                    
-                    <!-- KARTU KANAN ATAS -->
-                    <div class="vres-float-top">
-                        <div class="vres-bolt-icon">
-                            <i class="fa-solid fa-bolt"></i>
-                        </div>
-                        <div>
-                            <span class="vres-n-text">n =</span>
-                            <h3 class="vres-n-val">320</h3>
-                            <p class="vres-n-sub">patients validated</p>
-                        </div>
-                    </div>
-
-                    <!-- KARTU KIRI BAWAH -->
-                    <div class="vres-float-bottom">
-                        <span class="vres-kappa-title">KAPPA AGREEMENT</span>
-                        <h3 class="vres-kappa-val">0.82</h3>
-                        <p class="vres-kappa-sub">Strong inter-grader agreement</p>
-                        <div class="vres-progress-bg">
-                            <div class="vres-progress-fill"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
+      <div class="vres-stats-grid">
+        <div class="vres-card">
+          <h4 class="vres-num vres-dark">mAP@50-75%</h4>
+          <p class="vres-sub"></p>
         </div>
-    </section>
-
-    <!-- SECTION PUBLIC HEALTH IMPACT (PERSIS GAMBAR KIRI) -->
-    <section id="impact" class="impact-section">
-        <div class="container impact-grid">
-            
-            <!-- SISI KIRI: GAMBAR (Bisa kamu isi nama file gambarmu sendiri) -->
-            <div class="impact-image-container">
-                <img src="periksa mata.webp" alt="Eye Examination" class="impact-main-img">
-            </div>
-
-            <!-- SISI KANAN: TEKS & 4 KOTAK STATISTIK -->
-            <div class="impact-content">
-                <div class="impact-pill-badge">
-                    Public Health Impact
-                </div>
-                
-                <h2 class="impact-title">
-                    Bridging the Gap in <br>
-                    <span class="impact-blue-text">Global Eye Care</span>
-                </h2>
-                
-                <p class="impact-desc">
-                    An estimated 103 million people worldwide have diabetic retinopathy, yet over 80% of blindness caused by diabetes is preventable with timely screening. Our system addresses the critical shortage of specialist eye care in low- and middle-income settings.
-                </p>
-
-                <!-- 4 KOTAK PUTIH (GRID 2x2) -->
-                <div class="impact-4-cards-grid">
-                    <!-- Kotak 1 -->
-                    <div class="impact-card">
-                        <div class="impact-card-icon">
-                            <i class="fa-solid fa-user-group"></i>
-                        </div>
-                        <h3 class="impact-num">320</h3>
-                        <span class="impact-label-bold">Patients Screened</span>
-                        <p class="impact-subtext">In validation cohort</p>
-                    </div>
-
-                    <!-- Kotak 2 -->
-                    <div class="impact-card">
-                        <div class="impact-card-icon">
-                            <i class="fa-solid fa-earth-americas"></i>
-                        </div>
-                        <h3 class="impact-num">3 x</h3>
-                        <span class="impact-label-bold">Wider Reach</span>
-                        <p class="impact-subtext">vs. existing infrastructure</p>
-                    </div>
-
-                    <!-- Kotak 3 -->
-                    <div class="impact-card">
-                        <div class="impact-card-icon">
-                            <i class="fa-solid fa-shield-halved"></i>
-                        </div>
-                        <h3 class="impact-num">Grade A</h3>
-                        <span class="impact-label-bold">Evidence Level</span>
-                        <p class="impact-subtext">Prospective validation study</p>
-                    </div>
-
-                    <!-- Kotak 4 -->
-                    <div class="impact-card">
-                        <div class="impact-card-icon">
-                            <i class="fa-solid fa-award"></i>
-                        </div>
-                        <h3 class="impact-num">Top 5%</h3>
-                        <span class="impact-label-bold">Journal Ranking</span>
-                        <p class="impact-subtext">Published in peer-reviewed ophthalmology journal</p>
-                    </div>
-                </div>
-
-            </div>
-
+        <div class="vres-card">
+          <h4 class="vres-num vres-dark">mAP@50-95-65%</h4>
+          <p class="vres-sub"></p>
         </div>
-    </section>
+        <div class="vres-card">
+          <h4 class="vres-num vres-teal">Precision-99%</h4>
+          <p class="vres-sub"></p>
+        </div>
+        <div class="vres-card">
+          <h4 class="vres-num vres-teal">Recall-70%</h4>
+          <p class="vres-sub"></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- SISI KANAN: DUA GAMBAR BERDAMPINGAN MELAYANG -->
+    <div class="vres-right">
+      <div class="floating-box">
+        <!-- Gambar 2: App HP (Kanan - Dikecilkan) -->
+        <div class="card-float card-right">
+          <img src="retina-app.png" alt="AI Analysis Mobile App">
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
 
    <!-- SECTION RESEARCH & COLLABORATION (ISOLATED & EXACT FIT) -->
     <section id="collaboration" class="prr-section">
@@ -387,10 +313,10 @@
                         </div>
                         <div class="prr-journal-details">
                             <h4 class="prr-paper-title">
-                                "Validation of a Low-Cost Smartphone Retinal Imaging System Against Fundus Photography for Diabetic Retinopathy Screening"
+                                "Development Of An Innovative Retinal Imaging System with Controlled Illumination & AI Analysis for Diabetic Retinopathy Screening
+"
                             </h4>
                             <p class="prr-paper-meta">
-                                British Journal of Ophthalmology · Prospective · 2024
                             </p>
                         </div>
                     </div>
@@ -444,7 +370,7 @@
     <!-- FOOTER -->
     <footer>
         <div class="container">
-            <p>&copy; 2026 RetinaScan. All rights reserved. | Evidence Level: Grade A | Top 5% Journal Ranking</p>
+            <p>&copy; 2026 IRIS. All rights reserved. | Evidence Level: Grade A | Top 5% Journal Ranking</p>
         </div>
     </footer>
 <a href="./files/aplikasi-saya.apk" download="RetinalScreeningApp.apk" class="bottom-left-btn">
